@@ -2,7 +2,7 @@ Source: kcov
 Section: devel
 Priority: extra
 Maintainer: Michael Tautschnig <mt@debian.org>
-Build-Depends: debhelper (>= 7.0.50~), libdw-dev, libelf-dev, pkg-config, libglib2.0-dev, cmake, python
+Build-Depends: debhelper (>= 7.0.50~), binutils-dev, libcurl4-openssl-dev, zlib1g-dev, libdw-dev, libiberty-dev, cmake, python, libstdc++6
 Standards-Version: 3.9.4
 Homepage: http://simonkagstrom.github.com/kcov/
 Vcs-Git: git://github.com/SimonKagstrom/kcov.git
@@ -14,7 +14,7 @@ Description: Code coverage analysis using DWARF debugging information
  Kcov is a code coverage tester based on bcov by Thomas Neumann. It allows
  collecting code coverage information from executables without special
  command-line arguments, and continuosly produces output from long-running
- applications. 
+ applications.
  .
  Kcov, like Bcov, uses DWARF debugging information to make this possible.
 

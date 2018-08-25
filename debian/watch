@@ -1,3 +1,4 @@
 version=3
-https://github.com/SimonKagstrom/kcov/tags .*/v(\d.*)\.(?:tgz|tar\.(?:gz|bz2|xz))
+opts=filenamemangle=s/.+\/v?(\d\S+)\.tar\.gz/kcov-$1\.tar\.gz/ \
+  https://github.com/SimonKagstrom/kcov/tags .*/v?(\d\S+)\.tar\.gz
 # Bart Martens <bartm@debian.org>  Sat, 17 Nov 2012 13:00:16 +0000

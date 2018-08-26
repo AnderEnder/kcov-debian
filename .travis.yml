@@ -5,3 +5,10 @@ services:
 
 script:
   - docker run -it --rm --privileged=true -v $(pwd):/packages/kcov -w /packages/kcov anderender/ubuntu-build:xenial ./build.sh
+
+deploy:
+  provider: bintray
+  file: bintray.json
+  user: andriiradyk
+  key: BINTRAY_KEY
+  skip_cleanup: true

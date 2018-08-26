@@ -10,5 +10,5 @@ deploy:
   provider: bintray
   file: bintray.json
   user: andriiradyk
-  key: BINTRAY_KEY
+  key: $BINTRAY_KEY
   skip_cleanup: true

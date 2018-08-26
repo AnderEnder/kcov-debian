@@ -1,0 +1,7 @@
+sudo: true
+
+services:
+  - docker
+
+script:
+  - docker run -it --rm --privileged=true -v $(pwd):/packages/kcov -w /packages/kcov anderender/ubuntu-build:xenial ./build.sh

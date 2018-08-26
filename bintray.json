@@ -24,9 +24,9 @@
     "files": [
         {
             "includePattern": "build/(.*.deb)",
-            "uploadPattern": "pool/main/k/kcov/$1",
+            "uploadPattern": "pool/%%OS%%/main/k/kcov/$1",
             "matrixParams": {
-                "deb_distribution": "xenial",
+                "deb_distribution": "%%OS%%",
                 "deb_component": "main",
                 "deb_architecture": "amd64"
             }

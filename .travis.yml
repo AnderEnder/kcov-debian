@@ -3,8 +3,15 @@ sudo: true
 services:
   - docker
 
+env:
+  matrix:
+    - OS_NAME=bionic
+    - OS_NAME=xenial
+    - OS_NAME=trusty
+
 script:
-  - docker run -it --rm --privileged=true -v $(pwd):/packages/kcov -w /packages/kcov anderender/ubuntu-build:xenial ./build.sh
+  - docker run -it --rm --privileged=true -v $(pwd):/packages/kcov -w /packages/kcov anderender/ubuntu-build:${OS_NAME} ./build.sh
+  - sed -i "s/%%OS%%/$OS_NAME/" bintray.json
 
 deploy:
   provider: bintray
